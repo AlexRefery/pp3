@@ -32,7 +32,6 @@ public class RestClientApplication {
 		String code2 = restTemplate.exchange(URL_USERS, HttpMethod.PUT, requestUpdate, String.class, id).getBody();
 		System.out.println(code2);
 
-		headers.set(HttpHeaders.COOKIE, cookie.replace("/", "/3"));
 		HttpEntity<User> requestDelete = new HttpEntity<>(headers);
 		System.out.println(headers);
 
